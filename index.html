@@ -1,738 +1,586 @@
 <!-- Responsive, organizar css y optimizar código, crear conexion de datos firebase -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-PZZZS7PF");
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-69JE30QQL0"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-69JE30QQL0");
-    </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/styles.css" />
-    <title>L!zGC</title>
-    <link rel="shortcut icon" href="./src/img/Imagen5.png" />
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PZZZS7PF"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <section class="menu">
-      <nav>
-        <ul class="menu__list">
-          <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
-          <li class="menu__list__item">
-            <a href="#skills">Skills y Hobbies </a>
-          </li>
-          <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
-          <li class="menu__list__item"><a href="#formacion">Formación</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-PZZZS7PF");
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69JE30QQL0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-69JE30QQL0");
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <title>L!zGC</title>
+  <link rel="shortcut icon" href="./src/img/Imagen5.png" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZZZS7PF" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <section class="menu">
+    <nav>
+      <ul class="menu__list">
+        <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
+        <li class="menu__list__item">
+          <a href="#skills">Skills y Hobbies </a>
+        </li>
+        <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
+        <li class="menu__list__item"><a href="#formacion">Formación</a></li>
+      </ul>
+    </nav>
+  </section>
+  <!--Start Header-->
+  <header class="contenedor">
+    <!--Start Navbar-->
+    <nav class="navar" data-aos="fade-down">
+      <a href="https://github.com/LIZGRICAS" target="_blank"><img src="src\img\github_preview_rev_1.png" alt="base"
+          id="github" /></a>
+      <a href="https://api.whatsapp.com/send?phone=573008333775" target="_blank"><img
+          src="src\img\Whatsapp_preview_rev_1_preview_rev_1.png" alt="base" id="whatsapp" /></a>
+      <a href="https://www.linkedin.com/in/lizbeth-grisales-castro" target="_blank"><img src="src\img\linkedin1.jpg"
+          alt="base" id="linkedin" /></a>
+      <a href="https://t.me/LizGricas" target="_blank"><img src="src\img\Telegram_preview_rev_2.png" alt="base"
+          id="telegram" /></a>
+    </nav>
+    <!--Finish Navbar-->
+    <img src="./src/img/logo.png" alt="logo" id="logo" />
+    <div class="img-header" data-aos="fade-down-right">
+      <img src="./src/img/8clX.gif" alt="" id="gif" />
+      <img src="./src/img/Arcoíris CV.png" alt="" id="fotografia" />
+    </div>
+    <div class="header-text" data-aos="fade-down-left">
+      <h1 class="text-ppal">
+        Hola, mi nombre es Lizbeth Grisales y construyo realidades
+        virtuales.
+      </h1>
+      <a href="https://api.whatsapp.com/send?phone=573008333775" target="_blank" style="text-decoration: none">
+        <button type="button" class="btn" data-filter-color="#9d4edd">
+          Contáctame
+        </button>
+      </a>
+    </div>
+  </header>
+  <!--Finish Header-->
+  <!--Start Perfil-->
+  <main class="overlay-perfil" id="sobre-mi">
+    <strong class="Perfil" data-aos="fade-left">
+      <h2 id="titulo-perfil" data-aos="fade-right">Sobre mi..</h2>
+      <p class="about__paragraph">
+        Soy una Colombiana apasionada por el desarrollo de videojuegos y de
+        aplicaciones web, con experiencia en el sector tecnológico y en el
+        sector financiero en diversas organizaciones Nacionales e
+        Internacionales; Mis áreas de interés son todas aquellas en donde
+        pueda explotar de creatividad para recrear mundos cibernéticos dotados
+        de realidad aumentada con experiencias únicas. Mi proactividad y
+        creatividad ilimitada dan vida a proyectos vanguardistas. Manejo
+        tecnologías como Unity, C#, NodeJS, ReactJS, Blender, ThreeJS,
+        almacenamiento en la nube, figma, Git y metodologías ágiles como Scrum. Preparada
+        para enfrentar desafíos, mi enfoque está impulsado por la pasión y una
+        clara vocación de servicio.
+      </p>
+    </strong>
+    <aside class="Habilidades">
+      <h2 class="titulo-habilidades" data-aos="fade-left">Habilidades</h2>
+      <ul id="viñeta" data-aos="fade-down">
+        <li>Capacidad analítica</li>
+        <li>Autogestión alta</li>
+        <li>Creatividad e Innovación</li>
+        <li>Trabajo en equipo</li>
+        <li>Resolución de problemas</li>
+        <li>Pensamiento crítico y propositivo</li>
+      </ul>
+      <span class="about__lema">
+        <b id="lema">Lema:</b> Impactar realidades desde tecnologías
+        conscientes que recreen un mejor lugar para habitar.
+      </span>
+    </aside>
+  </main>
+  <!--Finish Perfil-->
+  <!-- Sección de Skills -->
+  <section class="skills" id="skills">
+    <h3 class="skills__title">Skills</h3>
+    <div class="skills__line">
+
+      <div class="skills__box">
+        <ul>
+
+          <div style="
+box-shadow: 0px 4px 4px rgba(59, 226, 8, 0.25);
+" data-aos="fade-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 32 32" fill="none">
+              <path
+                d="M27.6947 22.9999C27.883 22.6617 28 22.2807 28 21.9385V10.0613C28 9.71913 27.8831 9.33818 27.6947 9L16 16L27.6947 22.9999Z"
+                fill="#7F3A86" />
+              <path
+                d="M17.0395 29.7433L26.9611 23.8047C27.2469 23.6336 27.5067 23.3382 27.695 23L16.0003 16L4.30566 23C4.49398 23.3382 4.75382 23.6337 5.03955 23.8047L14.9611 29.7433C15.5326 30.0855 16.468 30.0855 17.0395 29.7433Z"
+                fill="#662579" />
+              <path
+                d="M27.6947 8.99996C27.5064 8.6617 27.2465 8.36629 26.9608 8.19521L17.0392 2.25662C16.4677 1.91446 15.5323 1.91446 14.9608 2.25662L5.03922 8.19521C4.46761 8.53729 4 9.37709 4 10.0613V21.9386C4 22.2807 4.11694 22.6618 4.30533 23L16 16L27.6947 8.99996Z"
+                fill="#9A5196" />
+              <path
+                d="M16.0385 24C11.6061 24 8 20.4112 8 16C8 11.5888 11.6061 8 16.0385 8C18.8458 8 21.4674 9.47569 22.919 11.8618L19.4765 13.9265C18.7492 12.736 17.4399 12 16.0385 12C13.8222 12 12.0193 13.7944 12.0193 16C12.0193 18.2056 13.8222 20 16.0385 20C17.4362 20 18.7421 19.2681 19.4707 18.0832L22.9205 20.1359C21.4692 22.5234 18.8467 24 16.0385 24Z"
+                fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.0001 13V13.9974H22.9999V13H22.0001V13.9974H21V15H22.0001V16.9948H21V18H22.0001V19H22.9999L23 18H25.0001V19H25.9999V18H27V17H25.9999V15H27V13.9974H25.9999V13H25.0001ZM25.0001 17V15H22.9999V16.9948L25.0001 17Z"
+                fill="white" />
+            </svg>
+          </div>
+          <li class="skills__name" style="
+          text-align: center;
+          ">C#</li>
         </ul>
-      </nav>
-    </section>
-    <!--Start Header-->
-    <header class="contenedor">
-      <!--Start Navbar-->
-      <nav class="navar" data-aos="fade-down">
-        <a href="https://github.com/LIZGRICAS" target="_blank"
-          ><img src="src\img\github_preview_rev_1.png" alt="base" id="github"
-        /></a>
-        <a
-          href="https://api.whatsapp.com/send?phone=573008333775"
-          target="_blank"
-          ><img
-            src="src\img\Whatsapp_preview_rev_1_preview_rev_1.png"
-            alt="base"
-            id="whatsapp"
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/lizbeth-grisales-castro"
-          target="_blank"
-          ><img src="src\img\linkedin1.jpg" alt="base" id="linkedin"
-        /></a>
-        <a href="https://t.me/LizGricas" target="_blank"
-          ><img
-            src="src\img\Telegram_preview_rev_2.png"
-            alt="base"
-            id="telegram"
-        /></a>
-      </nav>
-      <!--Finish Navbar-->
-      <img src="./src/img/logo.png" alt="logo" id="logo" />
-      <div class="img-header" data-aos="fade-down-right">
-        <img src="./src/img/8clX.gif" alt="" id="gif" />
-        <img src="./src/img/Arcoíris CV.png" alt="" id="fotografia" />
       </div>
-      <div class="header-text" data-aos="fade-down-left">
-        <h1 class="text-ppal">
-          Hola, mi nombre es Lizbeth Grisales y construyo realidades
-          virtuales.
-        </h1>
-        <a
-          href="https://api.whatsapp.com/send?phone=573008333775"
-          target="_blank"
-          style="text-decoration: none"
-        >
-          <button type="button" class="btn" data-filter-color="#9d4edd">
-            Contáctame
-          </button>
-        </a>
-      </div>
-    </header>
-    <!--Finish Header-->
-    <!--Start Perfil-->
-    <main class="overlay-perfil" id="sobre-mi">
-      <strong class="Perfil" data-aos="fade-left">
-        <h2 id="titulo-perfil" data-aos="fade-right">Sobre mi..</h2>
-        <p class="about__paragraph">
-          Soy una Colombiana apasionada por el desarrollo de videojuegos y de
-          aplicaciones web, con experiencia en el sector tecnológico y en el
-          sector financiero en diversas organizaciones Nacionales e
-          Internacionales; Mis áreas de interés son todas aquellas en donde
-          pueda explotar de creatividad para recrear mundos cibernéticos dotados
-          de realidad aumentada con experiencias únicas. Mi proactividad y
-          creatividad ilimitada dan vida a proyectos vanguardistas. Manejo
-          tecnologías como Unity, C#, NodeJS, ReactJS, Blender, ThreeJS,
-          almacenamiento en la nube, figma, Git y metodologías ágiles como Scrum. Preparada
-          para enfrentar desafíos, mi enfoque está impulsado por la pasión y una
-          clara vocación de servicio.
-        </p>
-      </strong>
-      <aside class="Habilidades">
-        <h2 class="titulo-habilidades" data-aos="fade-left">Habilidades</h2>
-        <ul id="viñeta" data-aos="fade-down">
-          <li>Capacidad analítica</li>
-          <li>Autogestión alta</li>
-          <li>Creatividad e Innovación</li>
-          <li>Trabajo en equipo</li>
-          <li>Resolución de problemas</li>
-          <li>Pensamiento crítico y propositivo</li>
+
+      <div class="skills__box bx-lg">
+        <ul>
+          <i class='bx bxl-unity' style="
+          color: #fffbfb;
+          box-shadow: 0px 4px 4px rgba(59, 226, 8, 0.25);
+        " data-aos="fade-left"></i>
+          <li class="skills__name">Unity</li>
         </ul>
-        <span class="about__lema">
-          <b id="lema">Lema:</b> Impactar realidades desde tecnologías
-          conscientes que recreen un mejor lugar para habitar.
-        </span>
-      </aside>
-    </main>
-    <!--Finish Perfil-->
-    <!-- Sección de Skills -->
-    <section class="skills" id="skills">
-      <h3 class="skills__title">Skills</h3>
-      <div class="skills__line">
-        
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-nodejs bx-lg"
-              style="
-                color: #12fb29;
-                box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-left"
-            ></i>
-            <li class="skills__name">C#</li>
-          </ul>
-        </div>
-        
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-nodejs bx-lg"
-              style="
-                color: #12fb29;
-                box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-left"
-            ></i>
-            <li class="skills__name">Unity</li>
-          </ul>
-        </div>
+      </div>
 
 
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-html5 bx-lg"
-              style="
+      <div class="skills__box">
+        <ul>
+          <i class="bx bxl-html5 bx-lg" style="
                 color: #c73b08;
                 box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-left"
-            ></i>
-            <li class="skills__name">HTML 5</li>
-          </ul>
-        </div>
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-css3 bx-lg"
-              style="
+              " data-aos="fade-left"></i>
+          <li class="skills__name">HTML 5</li>
+        </ul>
+      </div>
+      <div class="skills__box">
+        <ul>
+          <i class="bx bxl-css3 bx-lg" style="
                 color: #0630a6;
                 box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-left"
-            ></i>
-            <li class="skills__name">CSS 3</li>
-          </ul>
-        </div>
+              " data-aos="fade-left"></i>
+          <li class="skills__name">CSS 3</li>
+        </ul>
+      </div>
 
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-javascript bx-lg"
-              style="
+      <div class="skills__box">
+        <ul>
+          <i class="bx bxl-javascript bx-lg" style="
                 color: #f6fb12;
                 box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-left"
-            ></i>
-            <li class="skills__name">Javascript</li>
-          </ul>
-        </div>
+              " data-aos="fade-left"></i>
+          <li class="skills__name">Javascript</li>
+        </ul>
+      </div>
 
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-react bx-lg"
-              style="
+      <div class="skills__box">
+        <ul>
+          <i class="bx bxl-react bx-lg" style="
                 color: #12fbf1;
                 box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-right"
-            ></i>
-            <li class="skills__name">React</li>
-          </ul>
-        </div>
-
-        <div class="skills__box">
-          <ul>
-            <i
-              class="bx bxl-python bx-lg"
-              style="
-                color: #2a7ae4;
-                box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
-              "
-              data-aos="fade-right"
-            ></i>
-            <li class="skills__name">Blender</li>
-          </ul>
-        </div>
+              " data-aos="fade-right"></i>
+          <li class="skills__name">React</li>
+        </ul>
       </div>
-    </section>
-    <!-- Sección de Hobbies -->
-    <section class="hobbies" id="hobbies">
-      <h3 class="hobbies__title">Hobbies</h3>
-      <div class="hobbies__line">
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img">
-              <i class="bx bxs-landscape" data-aos="fade-left"></i>
-            </li>
-            <li class="hobbies__name">Mindfulness</li>
-          </ul>
-        </div>
 
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img">
-              <i
-                class="bx bx-book-open"
-                style="color: #2a7ae4"
-                data-aos="fade-left"
-              ></i>
-            </li>
-            <li class="hobbies__name">Leer</li>
-          </ul>
-        </div>
-
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img">
-              <i
-                class="bx bxs-music"
-                style="color: #2a7ae4"
-                data-aos="fade-left"
-              ></i>
-            </li>
-            <li class="hobbies__name">Oir música</li>
-          </ul>
-        </div>
-
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img">
-              <img src="./src/img/tv_icon.png" alt="" data-aos="fade-right" />
-            </li>
-            <li class="hobbies__name">Arte digital</li>
-          </ul>
-        </div>
-
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img">
-              <i
-                class="bx bxs-dog"
-                style="color: #2a7ae4"
-                data-aos="fade-right"
-              ></i>
-            </li>
-            <li class="hobbies__name">Macotas</li>
-          </ul>
-        </div>
-
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img">
-              <img
-                src="./src/img/camera_icon.png"
-                alt=""
-                data-aos="fade-right"
-              />
-            </li>
-            <li class="hobbies__name">Viajar</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!--Start wave-->
-    <section class="wave-div">
-      <div id="text-cot" data-aos="fade-right">
-        <h1 class="text-cot">
-          Dale vida a tu entorno digital <br />
-          con un diseño <span class="auto-type"></span>
-        </h1>
-      </div>
-      <button
-        type="button"
-        class="btn-abrir-popup btn2"
-        id="btn-abrir-popup"
-        data-filter-color="#5f00cc"
-        data-aos="fade-up-left"
-      >
-        Consigue una cotización
-      </button>
-    </section>
-    <div class="overlay" id="overlay">
-      <div class="popup" id="popup">
-        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"
-          ><i class="fas fa-times"></i
-        ></a>
-        <h1>5%</h1>
-        <h3>DE DESCUENTO ADICIONAL</h3>
-        <h4>Déjame tu datos y estaré en instantes contigo</h4>
-        <form action="">
-          <div class="contenedor-inputs">
-            <input type="text" placeholder="Nombre" />
-            <input type="email" placeholder="Correo" />
-            <input type="tel" placeholder="Celular" />
-            <input type="text" placeholder="Mensaje (opcional)" />
-          </div>
-          <div class="wrap">
-            <input type="checkbox" id="Web-site" />
-            <label for="Web-site">Sitio Web</label>
-            <input type="checkbox" id="Transformacion-digital" />
-            <label for="Transformacion-digital">Transformacion digital</label
-            ><br />
-            <input type="checkbox" id="Exp-usuario" />
-            <label for="Exp-usuario">Experiencia de Usuario</label>
-            <input type="checkbox" id="legal" />
-            <label for="legal">Analisis legal de la marca</label>
-          </div>
-          <input
-            type="submit"
-            class="btn-submit"
-            value="Quiero que me contacten"
-          />
-        </form>
+      <div class="skills__box">
+        <ul>
+          <i class='bx bxl-blender bx-lg' style='color:#ff3504; box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);'
+            data-aos="fade-right"></i>
+          <li class="skills__name">Blender</li>
+        </ul>
       </div>
     </div>
-    <!--Start servicies-->
-    
-    <section class="servicios">
-      <h1 data-aos="fade-up-left" class="text-ppal">Mis servicios incluyen…</h1>
-      <div class="contenedor-serv" data-aos="fade-down">
-        <div class="web">
-          <a href="" target="_blank"
-            ><img src="./src/img/web.gif" alt="web" id="web"
-          /></a>
-          <br /><br /><br />
-          <h2>Creatividad</h2>
-          <br />
-          <p>Deleita a tus usuarios desde contenido original con diseños 3D personalizados.</p>
-        </div>
-        <div class="transformacion">
-          <a href="" target="_blank"
-            ><img
-              src="./src/img/transformacion.gif"
-              alt="transformacion"
-              id="transformacion"
-          /></a>
-          <br /><br /><br />
-          <h2>Desarollo</h2>
-          <br />
-          <p>
-            Implementa videojuegos que mejoren la experiencia de marca para tus clientes y
-            colaboradores.
-          </p>
-        </div>
-        <div class="UX">
-          <a href="" target="_blank"
-            ><img src="./src/img/UX.gif" alt="UX" id="UX"
-          /></a>
-          <br /><br /><br />
-          <h2>Inteligencia</h2>
-          <br />
-          <p>
-            Incorpora nuevas tecnologías de prueba virtual, filtros de AR etc. 
-          </p>
-        </div>
+  </section>
+  <!-- Sección de Hobbies -->
+  <section class="hobbies" id="hobbies">
+    <h3 class="hobbies__title">Hobbies</h3>
+    <div class="hobbies__line">
+      <div class="hobbies__box">
+        <ul>
+          <li class="hobbies__img">
+            <i class="bx bxs-landscape" data-aos="fade-left"></i>
+          </li>
+          <li class="hobbies__name">Mindfulness</li>
+        </ul>
       </div>
-    </section>
-    <br />
-    <!--Finish servicies-->
-    <!-- Start projects-->
-    <article class="proyectos" id="xp">
-      <h1 data-aos="fade-up-right" class="text-ppal">
-        Experiencia Profesional
-      </h1>
-      <div class="bohemia">
-        <div class="text-boh" data-aos="fade-right">
-          <h4>Desarollo de sitio web</h4>
-          <h3>Oracle Next Educación & Alura Latam</h3>
-          <p>
-            <span
-              >Desarrollo de plataforma ecommerce desde Maquetación con HTML5,
-              arquitectura CSS, y validación de datos y CRUD con javascript,
-              desplegando el desarrollo frontend desde la plataforma
-              firebase.</span
-            >
-          </p>
-          <br />
-          <img
-            src="./src/img/icons8-información-del-sistema-64.png"
-            alt="monitor"
-            id="monitor"
-          />
-          <a
-            href="link:https://alura-ecommerce.web.app/ "
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <p class="sitio">VER SITIO WEB</p></a
-          >
-        </div>
-        <div class="web-boh" data-aos="fade-left"></div>
-        <br />
-      </div>
-      <div class="kuthzen">
-        <div class="text-kuth" data-aos="fade-right">
-          <h4>Analisis de datos y diseño de tablero de control</h4>
-          <h3>Proyecto Final Correlation One</h3>
-          <p>
-            <span
-              >Exploración, análisis y visualización de datos en dashboard, con
-              información valiosa de la problemática social, logrando certificar
-              con honores curso de Fundamentos en Analítica de Datos.
-            </span>
-          </p>
-          <br />
-          <img
-            src="./src/img/icons8-información-del-sistema-64.png"
-            alt="monitor"
-            id="monitor"
-          />
-          <a
-            href="https://saludmentalbogota2021.netlify.app/"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <p class="sitio">VER SITIO WEB</p></a
-          >
-        </div>
-        <div class="web-analisis" data-aos="fade-left"></div>
-      </div>
-      <div class="bohemia">
-        <div class="text-boh" data-aos="fade-right">
-          <h4>Diseño de sitio web y UX copy</h4>
-          <h3>Cartagena Crafted Cocktails</h3>
-          <p>
-            <span
-              >Diseño de página web, desde habilidades de copywriting, técnicas
-              de experiencia de usuario, análisis de negocio desarrollo FrontEnd
-              entre otros, contribuyendo así a la reactivación económica local e
-              innovación de mipymes.</span
-            >
-          </p>
-          <br />
-          <p>Proyecto Comunitario Sapiencia</p>
-          <br />
-          <img
-            src="./src/img/icons8-información-del-sistema-64.png"
-            alt="monitor"
-            id="monitor"
-          />
-          <a
-            href="https://cartagena-cooks.netlify.app/"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <p class="sitio">VER SITIO WEB</p></a
-          >
-        </div>
-        <div class="web-cart" data-aos="fade-left"></div>
-        <br />
-      </div>
-      <div class="kuthzen">
-        <div class="text-kuth" data-aos="fade-right">
-          <h4>diseño de sitio web y marca</h4>
-          <h3>Kuthzen</h3>
-          <p>
-            <span
-              >Kuthzen es una marca que incentiva la industria creativa y
-              tecnólogica, desde el comercio electrónico, con nuevos contenidos
-              de valor y creaciones funcionales ofertadas desde diferentes
-              medios digitales.</span
-            >
-          </p>
-          <br />
-          <img
-            src="./src/img/icons8-información-del-sistema-64.png"
-            alt="monitor"
-            id="monitor"
-          />
-          <p class="sitio">SITIO WEB PRÓXIMAMENTE...</p>
-        </div>
-        <div class="web-kuth" data-aos="fade-left"></div>
-      </div>
-      <div class="bohemia">
-        <div class="text-boh" data-aos="fade-right">
-          <h4>diseño de sitio web y marca</h4>
-          <h3>Mi Dulce Online</h3>
-          <p>
-            <span
-              >Creación de aplicativo Web SPA, con diseño branding, UX,
-              copywriting, mockup, MLS, instalación Backend a partir de
-              requerimientos funcionales y no funcionales definidos, creando
-              modelos y controladores del CRUD con conexión a base mongoDB y un
-              entorno FrontEnd desde la libreria React y Boostrap.</span
-            >
-          </p>
-          <br />
-          <p>Reto MinTIC-UIS</p>
-          <br />
-          <img
-            src="./src/img/icons8-información-del-sistema-64.png"
-            alt="monitor"
-            id="monitor"
-          />
-          <a
-            href=" https://youtube.com/watch?v=0VIMADyCCNQ"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <p class="sitio">VER SITIO WEB</p></a
-          >
-        </div>
-        <div class="web-dulce" data-aos="fade-left"></div>
-        <br />
-      </div>
-    </article>
-    <br />
-    <!-- Finish projects -->
-    <center><hr width="50%" /></center>
-    <!--Start Educación-->
-    <section class="section3" id="formacion">
-      <section class="academic" style="width: 100%; margin: 0">
-        <h2 class="academic__title">Formación académica</h2>
-        <div class="academic__courses">
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Pon el logotipo de la institución de formación -->
-              <li class="academic__courses__item__img">
-                <img
-                  src="./src/img/DS4A.png"
-                  style="margin: 0"
-                  data-aos="fade-left"
-                />
-              </li>
-              <li class="academic__courses__item__title">
-                <h3>Análisis de datos</h3>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2022 - Correlation One/MinTic</p>
-              </li>
-            </ul>
-          </div>
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!--Pon el logotipo de la institución de formación -->
-              <li class="academic__courses__item__img">
-                <img
-                  src="./src/img/logo_oracleAlura-es.1657102612.svg"
-                  data-aos="fade-up-right"
-                />
-              </li>
-              <li class="academic__courses__item__title">
-                <h3>Formación en Front-End</h3>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>En curso - Alura/Oracle</p>
-              </li>
-            </ul>
-          </div>
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Pon el logotipo de la institución de formación -->
-              <li class="academic__courses__item__img">
-                <img
-                  src="./src/img/653885058a43d348d7cf7f8c_generation-logo_NewBlue_SCREEN-01.png"
-                  data-aos="fade-right"
-                />
-              </li>
-              <li class="academic__courses__item__title">
-                <h3>Desarrollo de videojuegos</h3>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2024 - Generation Colombia & Unity</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
-      <div class="swiper mySwiper" data-aos="fade-down-left">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./src/img/Formación/En curso.gif" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/Formación/4RI.gif" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/Formación/Platzi.gif" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/Formación/Educación Superior.gif" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/img/Formación/Diplomados.gif" alt="" />
-          </div>
+      <div class="hobbies__box">
+        <ul>
+          <li class="hobbies__img">
+            <i class="bx bx-book-open" style="color: #2a7ae4" data-aos="fade-left"></i>
+          </li>
+          <li class="hobbies__name">Leer</li>
+        </ul>
+      </div>
+
+      <div class="hobbies__box">
+        <ul>
+          <li class="hobbies__img">
+            <i class="bx bxs-music" style="color: #2a7ae4" data-aos="fade-left"></i>
+          </li>
+          <li class="hobbies__name">Oir música</li>
+        </ul>
+      </div>
+
+      <div class="hobbies__box">
+        <ul>
+          <li class="hobbies__img">
+            <img src="./src/img/tv_icon.png" alt="" data-aos="fade-right" />
+          </li>
+          <li class="hobbies__name">Arte digital</li>
+        </ul>
+      </div>
+
+      <div class="hobbies__box">
+        <ul>
+          <li class="hobbies__img">
+            <i class="bx bxs-dog" style="color: #2a7ae4" data-aos="fade-right"></i>
+          </li>
+          <li class="hobbies__name">Macotas</li>
+        </ul>
+      </div>
+
+      <div class="hobbies__box">
+        <ul>
+          <li class="hobbies__img">
+            <img src="./src/img/camera_icon.png" alt="" data-aos="fade-right" />
+          </li>
+          <li class="hobbies__name">Viajar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--Start wave-->
+  <section class="wave-div">
+    <div id="text-cot" data-aos="fade-right">
+      <h1 class="text-cot">
+        Dale vida a tu entorno digital <br />
+        con un diseño <span class="auto-type"></span>
+      </h1>
+    </div>
+    <button type="button" class="btn-abrir-popup btn2" id="btn-abrir-popup" data-filter-color="#5f00cc"
+      data-aos="fade-up-left">
+      Conoce mas
+    </button>
+  </section>
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"
+          ><i class="fas fa-times"></i
+        ></a>
+      <video src="./src/video/Unity - Compressed with FlexClip.mp4" controls autoplay></video>
+    </div>
+  </div>
+  <!--Start servicies-->
+
+  <section class="servicios">
+    <h1 data-aos="fade-up-left" class="text-ppal">Mis servicios incluyen…</h1>
+    <div class="contenedor-serv" data-aos="fade-down">
+      <div class="web">
+        <a href="" target="_blank"><img src="./src/img/web.gif" alt="web" id="web" /></a>
+        <br /><br /><br />
+        <h2>Creatividad</h2>
+        <br />
+        <p>Deleita a tus usuarios desde contenido original con diseños 3D personalizados.</p>
+      </div>
+      <div class="transformacion">
+        <a href="" target="_blank"><img src="./src/img/transformacion.gif" alt="transformacion"
+            id="transformacion" /></a>
+        <br /><br /><br />
+        <h2>Desarollo</h2>
+        <br />
+        <p>
+          Implementa videojuegos que mejoren la experiencia de marca para tus clientes y
+          colaboradores.
+        </p>
+      </div>
+      <div class="UX">
+        <a href="" target="_blank"><img src="./src/img/UX.gif" alt="UX" id="UX" /></a>
+        <br /><br /><br />
+        <h2>Inteligencia</h2>
+        <br />
+        <p>
+          Incorpora nuevas tecnologías de prueba virtual, filtros de AR etc.
+        </p>
+      </div>
+    </div>
+  </section>
+  <br />
+  <!--Finish servicies-->
+  <!-- Start projects-->
+  <article class="proyectos" id="xp">
+    <h1 data-aos="fade-up-right" class="text-ppal">
+      Experiencia Profesional
+    </h1>
+    <div class="bohemia">
+      <div class="text-boh" data-aos="fade-right">
+        <h4>UI | Programación</h4>
+        <h3>Videojuego Wyvern Rampage Colosseum</h3>
+        <p>
+          <span>En un mundo antiguo y legendario, el Wyvern Rampage Colosseum es el centro de entretenimiento más grande
+            y peligroso de todos los reinos conocidos. Aquí es donde los valientes guerreros se enfrentan a los
+            monstruos más feroces, incluidos los temidos dragones, en una batalla por la gloria y la
+            supervivencia.</span>
+        </p>
+        <br />
+        <p>Proyecto Bootcamp Generation Colombia & Unity </p>
+        <br />
+        <img src="./src/img/icons8-información-del-sistema-64.png" alt="monitor" id="monitor" />
+        <a href="https://camilogz.itch.io/wyvern-rampage-colliseum" target="_blank" style="text-decoration: none">
+          <p class="sitio">VER SITIO WEB</p>
+        </a>
+      </div>
+      <div class="web-boh" data-aos="fade-left"></div>
+      <br />
+    </div>
+    <div class="kuthzen">
+      <div class="text-kuth" data-aos="fade-right">
+        <h4>UI | Programación</h4>
+        <h3>Videojuego the Little Accident</h3>
+        <p>
+          <span>En "The Little Accident", el jugador se sumerge en una aventura épica donde un accidente en el
+            laboratorio encoge al protagonista a tamaño pequeño. Ahora, armados solo con determinación y valentía, deben
+            explorar un mundo lleno de peligros, incluidas las ratas mutantes liberadas por el desastre. En su búsqueda
+            por recuperar su tamaño normal, los jugadores deberán recolectar potenciadores y enfrentarse a desafíos
+            ingeniosos mientras disfrutan de gráficos impresionantes.
+          </span>
+        </p>
+        <br />
+        <p>Proyecto Bootcamp Generation Colombia & Unity </p>
+        <br />
+        <img src="./src/img/icons8-información-del-sistema-64.png" alt="monitor" id="monitor" />
+        <a href="https://hellcrey.itch.io/the-little-accident" target="_blank" style="text-decoration: none">
+          <p class="sitio">VER SITIO WEB</p>
+        </a>
+      </div>
+      <div class="web-analisis" data-aos="fade-left"></div>
+    </div>
+    <div class="bohemia">
+      <div class="text-boh" data-aos="fade-right">
+        <h4>UI | Programación</h4>
+        <h3>Videojuego La Aventura de Samli</h3>
+        <p>
+          <span>Después de un día muy aburrido, el niño sale con su gato al bosque. Al gatito se le ocurre una idea y se
+            esconde, haciendo que el niño lo persiga y busque. El niño se ríe al ver el gato debajo de unas hojas, y así
+            continúan jugando el resto de la tarde, el gato escondiéndose y el niño acercándose y tocandolo para
+            indicarle que lo encontró una vez más. El gatito decide hacerlo más difícil y camuflarse con el ambiente,
+            pero el niño siempre lo encuentra al final.
+          </span>
+        </p>
+        <br />
+        <p>Proyecto Bootcamp Generation Colombia & Unity </p>
+        <br />
+        <img src="./src/img/icons8-información-del-sistema-64.png" alt="monitor" id="monitor" />
+        <a href="https://anigir.itch.io/la-aventura-de-samli" target="_blank" style="text-decoration: none">
+          <p class="sitio">VER SITIO WEB</p>
+        </a>
+      </div>
+      <div class="web-cart" data-aos="fade-left"></div>
+      <br />
+    </div>
+    <div class="kuthzen">
+      <div class="text-kuth" data-aos="fade-right">
+        <h4>diseño de sitio web y marca</h4>
+        <h3>Oracle Next Educación & Alura Latam</h3>
+        <p>
+          <span>Desarrollo de plataforma ecommerce desde Maquetación con HTML5,
+            arquitectura CSS, y validación de datos y CRUD con javascript,
+            desplegando el desarrollo frontend desde la plataforma
+            firebase.</span>
+        </p>
+        <br />
+        <img src="./src/img/icons8-información-del-sistema-64.png" alt="monitor" id="monitor" />
+        <a href="link:https://alura-ecommerce.web.app/ " target="_blank" style="text-decoration: none">
+          <p class="sitio">VER SITIO WEB</p>
+        </a>
+
+      </div>
+      <div class="web-kuth" data-aos="fade-left"></div>
+    </div>
+    <div class="bohemia">
+      <div class="text-boh" data-aos="fade-right">
+        <h4>diseño de sitio web y marca</h4>
+        <h3>Mi Dulce Online</h3>
+        <p>
+          <span>Creación de aplicativo Web SPA, con diseño branding, UX,
+            copywriting, mockup, MLS, instalación Backend a partir de
+            requerimientos funcionales y no funcionales definidos, creando
+            modelos y controladores del CRUD con conexión a base mongoDB y un
+            entorno FrontEnd desde la libreria React y Boostrap.</span>
+        </p>
+        <br />
+        <p>Reto MinTIC-UIS</p>
+        <br />
+        <img src="./src/img/icons8-información-del-sistema-64.png" alt="monitor" id="monitor" />
+        <a href=" https://youtube.com/watch?v=0VIMADyCCNQ" target="_blank" style="text-decoration: none">
+          <p class="sitio">VER SITIO WEB</p>
+        </a>
+      </div>
+      <div class="web-dulce" data-aos="fade-left"></div>
+      <br />
+    </div>
+  </article>
+  <br />
+  <!-- Finish projects -->
+  <center>
+    <hr width="50%" />
+  </center>
+  <!--Start Educación-->
+  <section class="section3" id="formacion">
+    <section class="academic" style="width: 100%; margin: 0">
+      <h2 class="academic__title">Formación académica</h2>
+      <div class="academic__courses">
+        <div class="academic__courses__box">
+          <ul class="academic__courses__list">
+            <!-- Pon el logotipo de la institución de formación -->
+            <li class="academic__courses__item__img">
+              <img src="./src/img/DS4A.png" style="margin: 0" data-aos="fade-left" />
+            </li>
+            <li class="academic__courses__item__title">
+              <h3>Análisis de datos</h3>
+            </li>
+            <li class="academic__courses__item__subtitle">
+              <p>2022 - Correlation One/MinTic</p>
+            </li>
+          </ul>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class="academic__courses__box">
+          <ul class="academic__courses__list">
+            <!--Pon el logotipo de la institución de formación -->
+            <li class="academic__courses__item__img">
+              <img src="./src/img/logo_oracleAlura-es.1657102612.svg" data-aos="fade-up-right" />
+            </li>
+            <li class="academic__courses__item__title">
+              <h3>Formación en Front-End</h3>
+            </li>
+            <li class="academic__courses__item__subtitle">
+              <p>En curso - Alura/Oracle</p>
+            </li>
+          </ul>
+        </div>
+        <div class="academic__courses__box">
+          <ul class="academic__courses__list">
+            <!-- Pon el logotipo de la institución de formación -->
+            <li class="academic__courses__item__img">
+              <img src="./src/img/653885058a43d348d7cf7f8c_generation-logo_NewBlue_SCREEN-01.png"
+                data-aos="fade-right" />
+            </li>
+            <li class="academic__courses__item__title">
+              <h3>Desarrollo de videojuegos</h3>
+            </li>
+            <li class="academic__courses__item__subtitle">
+              <p>2024 - Generation Colombia & Unity</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-    <!--Finish Educación-->
-    <!--Star Footer-->
-    <footer class="footer">
-      <span id="copy">
-        <b id="visit"> Visita M!...</b
-        ><a href="https://blogesenciafractal.netlify.app"
-          ><img
-            src="./src/img/blog-removebg-preview.png"
-            alt="blog"
-            id="blog"
-            data-aos="fade-down-left"
-        /></a>
-        <br /><br />copyrigth© by Lizbeth Grisales Castro<br />Todos los
-        Derechos Reservados.</span
-      >
-      <p id="datos">
-        Teléfono +57 3008333775 <br />
-        lizgricas@gmail.com <br />
-        Medellín, Colombia <br /><br />
-        <span
-          ><b>Contacto:</b>
-          <a
-            href="https://api.whatsapp.com/send?phone=573008333775"
-            target="_blank"
-            ><img src="./src/img/contactanos.png" alt="base" id="contact" />
-          </a>
-        </span>
-      </p>
-    </footer>
-    <!--Finish Footer-->
-    <!-- JS -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="./src/js/popup.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-- Initialize TYPED -->
-    <script>
-      let typed = new Typed(".auto-type", {
-        strings: ["Personalizado.", "Innovador.", "Estratégico."],
-        typeSpeed: 150,
-        backSpeed: 150,
-        loop: true,
-      });
-    </script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        cssMode: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        mousewheel: true,
-        keyboard: true,
-      });
-    </script>
-  </body>
+
+    <div class="swiper mySwiper" data-aos="fade-down-left">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./src/img/Formación/En curso.gif" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/Formación/4RI.gif" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/Formación/Platzi.gif" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/Formación/Educación Superior.gif" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./src/img/Formación/Diplomados.gif" alt="" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!--Finish Educación-->
+  <!--Star Footer-->
+  <footer class="footer">
+    <span id="copy">
+      <b id="visit"> Visita M!...</b><a href="https://blogesenciafractal.netlify.app"><img
+          src="./src/img/blog-removebg-preview.png" alt="blog" id="blog" data-aos="fade-down-left" /></a>
+      <br /><br />copyrigth© by Lizbeth Grisales Castro<br />Todos los
+      Derechos Reservados.</span>
+    <p id="datos">
+      Teléfono +57 3008333775 <br />
+      lizgricas@gmail.com <br />
+      Medellín, Colombia <br /><br />
+      <span><b>Contacto:</b>
+        <a href="https://api.whatsapp.com/send?phone=573008333775" target="_blank"><img src="./src/img/contactanos.png"
+            alt="base" id="contact" />
+        </a>
+      </span>
+    </p>
+  </footer>
+  <!--Finish Footer-->
+  <!-- JS -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./src/js/popup.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Initialize TYPED -->
+  <script>
+    let typed = new Typed(".auto-type", {
+      strings: ["Personalizado.", "Innovador.", "Estratégico."],
+      typeSpeed: 150,
+      backSpeed: 150,
+      loop: true,
+    });
+  </script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+</body>
+
 </html>

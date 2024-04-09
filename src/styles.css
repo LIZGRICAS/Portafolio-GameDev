@@ -639,28 +639,28 @@ section.skills, section.hobbies{
 .web-cart {
     max-width: 80%;
     min-height: 292px;
-    background-image: url(./img/monitor_cartagena.gif);
+    background-image: url(./img/la_aventura_de_samli.png);
     background-size: 100% 100%;
 }
 
 .web-analisis {
     max-width: 80%;
     min-height: 292px;
-    background-image: url(./img/monitor_analisis.gif);
+    background-image: url(./img/Game-the-little-accident-intro.gif  );
     background-size: 100% 100%;
 }
 
 .web-boh {
     max-width: 80%;
     min-height: 292px;
-    background-image: url(./img/monitor_bohemia.gif);
+    background-image: url(./img/Certificado\ de\ Regalo\ Gift\ Card\ Minimalista\ Rosa\ \(1\).gif);
     background-size: 100% 100%;
 }
 
 .web-kuth {
     max-width: 80%;
     min-height: 292px;
-    background-image: url(./img/monitor_kuthzen.gif);
+    background-image: url(./img/monitor_bohemia.gif);
     background-size: 100% 100%;
 }
 
@@ -908,26 +908,26 @@ section.academic{
 }
 
 .popup {
-	background: #F8F8F8;
+	background: transparent;
     transform: rotateY(0deg) rotateX(0deg) scale(1.3);
     perspective: 379.546px;
     filter: drop-shadow(rgba(162, 247, 232, 0.952) 0px 10px 15px);
  	border-radius: 3px;
 	padding: 20px;
 	text-align: center;
-	width: 600px;
+	width: 800px;
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
 }
 
 .popup .btn-cerrar-popup {
-	font-size: 16px;
+	font-size: 36px;
 	line-height: 16px;
 	display: block;
 	text-align: right;
 	transition: .3s ease all;
-	color: #BBBBBB;
+	color: #cf1919;
 }
 
 .popup .btn-cerrar-popup:hover {
